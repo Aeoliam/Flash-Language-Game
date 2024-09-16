@@ -7,9 +7,9 @@ current_card = {}
 to_learn = {}
 
 try:
-    data = pandas.read_csv("../FlashTranslatorCapstone/data/words_to_learn.csv")
+    data = pandas.read_csv("../FlashFrenchTranslator/data/words_to_learn.csv")
 except FileNotFoundError:
-    original_data = pandas.read_csv("../FlashTranslatorCapstone/data/french_words.csv")
+    original_data = pandas.read_csv("../FlashFrenchTranslator/data/french_words.csv")
     to_learn = original_data.to_dict(orient="records")
 else:
     to_learn = data.to_dict(orient="records")
